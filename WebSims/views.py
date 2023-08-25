@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from WebSims.models import Usuario, Modder, Mod
+from WebSims.models import *
 from WebSims.templates import *
 
 
@@ -13,6 +13,17 @@ def registrar_usuario(request):
     respuesta=f"Usuario creado: {usuario.nombre}"
     return HttpResponse(respuesta)
 
+
+def registrar_modder(request):
+    nombre_usuario="Adeepingo"
+    url_modder="https://www.patreon.com/adeepindigo?l=es"
+    print("Registrando usuario")
+    modder=Modder(usuario=nombre_usuario, url=url_modder)
+    modder.save()
+    respuesta=f"Usuario creado: {modder.usuario}"
+    return HttpResponse(respuesta)
+
+
 def registrar_mod(request):
     nombre_mod="Wonderful Whims"
     creador_mod="TurboDriver"
@@ -21,6 +32,14 @@ def registrar_mod(request):
     mod.save()
     respuesta=f"Mod {mod.nombre}, creado por {mod.creador} cargado a la web."
     return HttpResponse(respuesta)
+
+def listar_modders(request):
+    modders=Modder.objects.all()
+    respuesta=""
+    for modder in modders:
+        respuesta+=f"{modder.usuario} - {modder.url}<br>" 
+    return HttpResponse(respuesta)   
+
 
 def listar_mods(request):
     mods=Mod.objects.all()
@@ -44,7 +63,8 @@ def vista_usuario(request):
     return render(request,"WebSims/Usuarios.html")
 
 def vista_modder(request):
-    return render(request,"WebSims/Modders.html")
+    modders=Modder.objects.all()
+    return render(request,"WebSims/Modders.html", {"modders":modders})
 
 def vista_mod(request):
     mods=Mod.objects.all()

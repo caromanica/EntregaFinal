@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MODDERS</title>
-</head>
-<body>
-    <h1>Bienvenidx modder! Registra tus creaciones en Sims Mod House </h1>
+{% extends "WebSims/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} MODDERS {% endblock %}
+{% block subtitulo %} ¡Sé parte de la comunidad! {% endblock %}
+
+{% block contenido_que_cambia %} 
+
+<tbody>
+    <h2>Mods disponibles en Sims Mod House </h2>
+    <ul>
+        {% for modder in modders %}
+           <li>{{modder.usuario}} - {{modder.url}}</li>
+        {% endfor %}  
 </body>
-</html>
+
+{% endblock %} 
+{% block titulo2 %} {% endblock %} 
+
+{% block contenido_que_cambia_3 %} <p class="lead"> </p>
+{% endblock %} 
+
+
+{% block imagen2 %}https://images6.alphacoders.com/589/589368.jpg{% endblock %}
+
+{% block contenido_que_cambia_2 %}
+
+{% endblock %} 

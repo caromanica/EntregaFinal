@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>The Sims Mod House</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'WebSims/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href='https://github.com/caromanica/EntregaFinal.git'>3ra Entrega - CaroManica</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'usuarios' %}">Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'modders' %}">Modders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'mods' %}">Mods disponibles</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://images.alphacoders.com/127/1276293.png')">
+            <div style="height: 25rem"></div>
+            <div class="text-center">
+                <h1 class="text-white mb-100 fw-bolder">{% block titulo %} The Sims Mod House {% endblock %} </h1>
+                <p class="text-white-50 mb-0">{% block subtitulo %} Compartí, descargá y actualizá mods {% endblock %}</p>
+            </div>
+        </header>
+        {% block contenido_que_cambia %} 
+
+
+        {% endblock %} 
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>{% block titulo2 %}Comparte, explora, actualiza {% endblock %}</h2>
+                        {% block contenido_que_cambia_3 %}
+                        <p class="lead">Comparte tus mods y CC personalizado con toda la comunidad. Prueba mods de código abierto y dale vida a tu juego. </p>
+                        <p class="mb-0">Nos comprometemos a mantenerte al tanto de reparaciones y actualizaciones ¡tu partida está a salvo!</p>
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('{% block imagen2 %}https://cdn.wallpapersafari.com/18/26/uSePjG.jpg{% endblock %}');">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        {% block contenido_que_cambia_2 %}
+                        <h2>¡Gana apoyo para tus proyectos!</h2>
+                        <p class="lead">Difunde tus creaciones y comparte tu Patreon para que las personas apoyen tu contenido</p>
+                        <p class="mb-0">Ahora, los simmers tendrán un listado actualizado de todas las creaciones disponibles y sus creadores</p>
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Coderhouse 2023 - Comision 43870</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
