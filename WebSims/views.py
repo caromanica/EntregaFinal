@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from WebSims.models import Usuario, Modder, Mod
+from WebSims.templates import *
 
 
 def saludo(request): #probando
@@ -38,6 +39,20 @@ def listar_usuarios(request):
         respuesta+=f"{usuario.nombre}<br>" 
     return HttpResponse(respuesta)    
     
+
+def vista_inicio(request):
+    return render(request, 'WebSims/inicio.html')
+
+def vista_usuario(request):
+    return render(request,"WebSims/Usuarios.html")
+
+def vista_modder(request):
+    return render(request,"WebSims/Modders.html")
+
+def vista_mod(request):
+    return render(request,"WebSims/Mods.html")
+
+
 
 
 
