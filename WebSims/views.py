@@ -4,9 +4,6 @@ from WebSims.models import Usuario, Modder, Mod
 from WebSims.templates import *
 
 
-def saludo(request): #probando
-    return HttpResponse("probando probando")
-
 
 def registrar_usuario(request):
     nombre_usuario="Eliza Pancakes"
@@ -22,7 +19,7 @@ def registrar_mod(request):
     print("Registrando mod en la web")
     mod=Mod(nombre=nombre_mod, creador=creador_mod)
     mod.save()
-    respuesta=f"Mod {mod.nombre}, creado por {mod.creador} cargado a la web"
+    respuesta=f"Mod {mod.nombre}, creado por {mod.creador} cargado a la web."
     return HttpResponse(respuesta)
 
 def listar_mods(request):
@@ -50,7 +47,10 @@ def vista_modder(request):
     return render(request,"WebSims/Modders.html")
 
 def vista_mod(request):
-    return render(request,"WebSims/Mods.html")
+    mods=Mod.objects.all()
+    return render(request,"WebSims/Mods.html", {"mods":mods})
+    
+
 
 
 

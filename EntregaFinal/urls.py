@@ -22,4 +22,5 @@ from WebSims.views import vista_inicio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('WebSims/', include('WebSims.urls')),
+    path('', vista_inicio),
 ]

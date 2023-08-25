@@ -14,5 +14,5 @@ class Modder(models.Model):
 
 class Mod(models.Model):
     nombre=models.CharField(max_length=50)
-    creador= models.CharField(max_length=30)
-    download_link = models.URLField()
+    creador=models.CharField(max_length=30)
+    

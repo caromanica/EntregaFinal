@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LISTA DE MODS </title>
-</head>
-<body>
+</thead>
+<tbody>
     <h1>Mods disponibles en Sims Mod House </h1>
+    <ul>
+        {% for mod in mods %}
+           <li>{{mod.nombre}} - {{mod.creador}}</li>
+        {% endfor %}  
 </body>
 </html>

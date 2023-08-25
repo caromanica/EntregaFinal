@@ -7,12 +7,13 @@ from WebSims.templates import *
 
 
 urlpatterns = [
-    path('saludo/', saludo),
     path('inicio/', vista_inicio),
     path('registrousuarios/', registrar_usuario),
     path('registromods/', registrar_mod),
     path('listademods/', listar_mods),
     path('listadeusuarios/', listar_usuarios),
-    path('usuarios', vista_usuario)
+    path('usuarios/', vista_usuario, name="usuarios"),
+    path("mods/", vista_mod, name="mods"),
+    path("modders/", vista_modder, name="modders"),
 ]
 
