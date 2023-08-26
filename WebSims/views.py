@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from WebSims.models import *
+from WebSims.models import Modder, Mod, Usuario
 from WebSims.templates import *
 
 
@@ -12,6 +12,8 @@ def registrar_usuario(request):
     usuario.save()
     respuesta=f"Usuario creado: {usuario.nombre}"
     return HttpResponse(respuesta)
+
+
 
 
 def registrar_modder(request):

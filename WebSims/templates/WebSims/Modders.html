@@ -10,9 +10,10 @@
 <tbody>
     <h2>Mods disponibles en Sims Mod House </h2>
     <ul>
-        {% for modder in modders %}
-           <li>{{modder.usuario}} - {{modder.url}}</li>
-        {% endfor %}  
+       {% for modder in modders %}
+      <li>{{modder.usuario}} - {{modder.url}}</li>
+      {% endfor %}  
+    </ul>    
 </body>
 
 {% endblock %} 

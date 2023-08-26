@@ -9,7 +9,7 @@ class Usuario(models.Model):
 
 class Modder(models.Model):
     usuario= models.CharField(max_length=30)
-    url= models.CharField(max_length=30)
+    url= models.CharField(max_length=100)
     email= models.EmailField()
 
 class Mod(models.Model):
