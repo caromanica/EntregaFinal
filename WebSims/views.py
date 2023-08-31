@@ -6,7 +6,7 @@ from WebSims.templates import *
 
 
 def registrar_usuario(request):
-    nombre_usuario="Eliza Pancakes"
+    nombre_usuario="Olvido Fantoche"
     print("Registrando usuario")
     usuario=Usuario(nombre=nombre_usuario)
     usuario.save()
@@ -15,10 +15,9 @@ def registrar_usuario(request):
 
 
 
-
 def registrar_modder(request):
-    nombre_usuario="Adeepingo"
-    url_modder="https://www.patreon.com/adeepindigo?l=es"
+    nombre_usuario="Scumbumbo"
+    url_modder="https://scumbumbomods.com/"
     print("Registrando usuario")
     modder=Modder(usuario=nombre_usuario, url=url_modder)
     modder.save()
@@ -27,8 +26,8 @@ def registrar_modder(request):
 
 
 def registrar_mod(request):
-    nombre_mod="Wonderful Whims"
-    creador_mod="TurboDriver"
+    nombre_mod="Slice of life"
+    creador_mod="Kawaii Stacie"
     print("Registrando mod en la web")
     mod=Mod(nombre=nombre_mod, creador=creador_mod)
     mod.save()
