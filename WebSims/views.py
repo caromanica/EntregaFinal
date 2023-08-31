@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from WebSims.models import Modder, Mod, Usuario
 from WebSims.templates import *
+from django.template import Template, Context, loader
 
 
 
@@ -16,8 +17,8 @@ def registrar_usuario(request):
 
 
 def registrar_modder(request):
-    nombre_usuario="Scumbumbo"
-    url_modder="https://scumbumbomods.com/"
+    nombre_usuario="Ravasheen"
+    url_modder="https://ravasheen.com/"
     print("Registrando usuario")
     modder=Modder(usuario=nombre_usuario, url=url_modder)
     modder.save()
@@ -26,8 +27,8 @@ def registrar_modder(request):
 
 
 def registrar_mod(request):
-    nombre_mod="Slice of life"
-    creador_mod="Kawaii Stacie"
+    nombre_mod="Teleport"
+    creador_mod="Scumbumbo"
     print("Registrando mod en la web")
     mod=Mod(nombre=nombre_mod, creador=creador_mod)
     mod.save()

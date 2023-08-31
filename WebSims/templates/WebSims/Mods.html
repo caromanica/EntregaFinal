@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE MODS</title>
-</head>
+{% extends "WebSims/padre.html" %}
+
+{% load static %}
+
+{% block titulo %} MODS {% endblock %}
+{% block subtitulo %} ¡Imagina sin límites! {% endblock %}
+
+{% block contenido_que_cambia %} 
+
 <body>
-    <h1>Mods disponibles en Sims Mod House</h1>
+    <h2>Links de mods actualizados - Sims Mod House</h2>
     <ul>
-        {% for mod in mods %}
-            <li>{{ mod.nombre }} - {{ mod.creador }}</li>
-        {% endfor %}
-    </ul>
+       {% for mod in mods %}
+      <li>{{ mod.nombre }} - {{ mod.creador }}</li>
+      {% endfor %}  
+    </ul>    
 </body>
-</html>
+
+{% endblock %} 
+{% block titulo2 %} {% endblock %} 
+
+{% block contenido_que_cambia_3 %} <p class="lead"> </p>
+{% endblock %} 
+
+
+{% block imagen2 %}https://images6.alphacoders.com/589/589368.jpg{% endblock %}
+
+{% block contenido_que_cambia_2 %}
+
+{% endblock %} 

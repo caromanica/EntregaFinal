@@ -10,6 +10,7 @@ urlpatterns = [
     path('inicio/', vista_inicio),
     path('registrousuarios/', registrar_usuario),
     path('registromods/', registrar_mod),
+    path('registromodders/', registrar_modder),
     path('listademods/', listar_mods),
     path('listadeusuarios/', listar_usuarios),
     path('usuarios/', vista_usuario, name="usuarios"),
