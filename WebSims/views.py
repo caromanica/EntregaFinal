@@ -7,7 +7,7 @@ from django.template import Template, Context, loader
 
 
 def registrar_usuario(request):
-    nombre_usuario="Olvido Fantoche"
+    nombre_usuario="Nervioso del todo"
     print("Registrando usuario")
     usuario=Usuario(nombre=nombre_usuario)
     usuario.save()

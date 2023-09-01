@@ -10825,8 +10825,8 @@ textarea.form-control-lg {
   }
 }
 .bg-image-full {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  padding-top: 200px; /* Ajusta la cantidad de espacio superior según tu preferencia */
+  text-align: center; /* Centra el texto horizontalmente */
 }
